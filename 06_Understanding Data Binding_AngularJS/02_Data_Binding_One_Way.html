@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Understanding Data Binding Inheritance</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+    </head>
+<body ng-app="bind">
+    <div ng-controller="emp">
+        <p>Value x is <strong>{{x}}</strong></p>
+        <p>Valie y is <strong>{{y}}</strong></p>
+        <hr>
+        <p>Value x is <strong><span ng-bind="x"></span></strong></p>
+        <p>Valie y is <strong><span ng-bind="y"></span></strong></p>
+        <hr>
+        Sum =<strong> {{sum}}</strong><br>
+        <button ng-click="addSum()"> Sum Me!</button>
+        <hr>
+        Initial value of a is <strong>{{::x}}</strong> <!-- One-Time Binding -->
+    </div>
+<script type="text/javascript" src="dataBinding_One_Way.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Understanding Data Binding Inheritance</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+    </head>
+<body ng-app="bind">
+    <div ng-controller="emp">
+        <p>Value x is {{x}}</p>
+        <p>Valie y is {{y}}</p>
+        <hr>
+        <p>Value x is <span ng-bind="x"></span></p>
+        <p>Valie y is <span ng-bind="y"></span></p>
+
+    </div>
+<script type="text/javascript" src="dataBinding_First_Step.js"></script>
+</body>
+</html>

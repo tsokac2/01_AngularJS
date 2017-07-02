@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Understanding Data Binding Inheritance</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    </head>
+<body ng-app="bind">
+    <div ng-controller="emp">
+        <div>
+            Value of a is {{x}},
+            but you can cahange
+            <input type="text" ng-model="x"/> <br><br>
+            Value of a is {{y}},
+            but you can cahange
+            <input type="text" ng-model="y"/>
+        </div>
+        Sum =<strong> {{sum}}</strong><br>
+        <button ng-click="addSum()"> Sum Me!</button>
+    </div>
+<script type="text/javascript" src="dataBinding_Two_Way.js"></script>
+</body>
+</html>
