@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Understanding RootScope Inheritance</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                    
+<script type="text/javascript"> 
+    var app = angular.module("sample", []).run(["$rootScope", function(x){
+        x.TaxtPrecent = 40;
+        }]);
+
+        app.controller("emp",["$scope", function(y){
+        y.name = "Smith";
+        }]);
+
+        app.controller("empDet", ["$scope", function(c){
+            c.sal = 5000;
+            c.dep = "IT";
+        }]);
+
+        app.controller("taxsNetoPay", ["$scope", "$rootScope", function(t,x){
+
+        t.getTaxt = function(){
+            return t.sal * x.TaxtPrecent/100;
+        };
+        t.getNet = function(){
+            return t.sal - t.getTaxt();
+        };
+        }]);
+</script>
+    </head>
+<body ng-app="sample">
+   <div ng-controller = "emp"> <!-- Parent Controller -->
+       John <strong>{{name}}</strong>
+       <div ng-controller="empDet"> <!-- Nested Controller -->
+           John salary is <strong>{{sal}}</strong> in <strong>{{dep}}</strong> department.
+           <div ng-controller="taxsNetoPay">
+                Takes: <strong>{{getTaxt()}}</strong> <br>
+                Neto: <strong>{{getNet()}}</strong>
+           </div>
+       </div>
+    </div>
+</body>
+</html>
