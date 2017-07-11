@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>ng-if, ng-repeat, ng-show, ng-hide and Bootstrap CSS framework integration</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+	<div ng-controller="emp">
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Enter Employee No:</label>
+				<input type="text" class="form-control" ng-model="searchEmpno" />
+			</div>
+			<button class="btn btn-primary" ng-click="doSearch()">Search</button>
+		</form>
+		<hr>
+		<div class="row">
+			<div class="col-sm-2">Employee No</div>
+			<div class="col-sm-2">{{empno}}</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">Name</div>
+			<!-- <div class="col-sm-2">{{ename | uppercase}}</div> - Direct filters-->
+             <div class="col-sm-2">{{ename}}
+		</div>
+		<div class="row">
+			<div class="col-sm-2">Salary</div>
+			<!--<div class="col-sm-2">{{sal | number:2}} - Two decimal places--> 
+			<!--<div class="col-sm-2">{{sal | currency:"$":2}} -->
+                <div class="col-sm-2">{{sal | currency:"USD":2}}
+
+				<span ng-if="isSalAbove7k" class="glyphicon glyphicon-warning-sign"></span>
+				
+				<!--
+				<span ng-show="sal > 7000" class="glyphicon glyphicon-warning-sign"></span>
+				-->
+				<!--
+				<span ng-hide="sal==undefined || sal <= 7000" class="glyphicon glyphicon-warning-sign"></span>-->
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-2">Hire Date</div>
+	<div class="col-sm-2">{{hiredate | date: 'mediumDate' }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-2">DOB</div>
+	<div class="col-sm-2">{{dob | medium }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-2">Department</div>
+	<div class="col-sm-2">{{deptno}}</div>
+</div>
+</div>
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="filters.js"></script>
+</body>
+</html>

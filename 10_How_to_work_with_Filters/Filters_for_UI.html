@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>AngularJs - Filters</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+	<div ng-controller="emp">
+        Quick Dept Search: <input ng-model="qSearchDept" />
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<td>#</td>
+					<td>Name</td>
+					<td>Salary</td>
+					<td>Dept</td>
+				</tr>
+			</thead>
+			<!-- <tr ng-repeat="oEmp in employees | filter: {ename:'s', depton: '20'}"> - Name that included letther s and depertmant 20 - hardcoding - not for the users intrface -->
+				<tr ng-repeat="oEmp in employees | filter: {depton: qSearchDept}"> <!-- For UI experience -->
+                <td>{{oEmp.empno}}</td>
+				<td>{{oEmp.ename}}</td>
+				<td>{{oEmp.sal}}
+					<span ng-show="oEmp.sal > 7000" class="glyphicon glyphicon-warning-sign"></span>
+				</td>
+				<td>{{oEmp.deptno}}</td>
+			</tr>
+		</table>
+	</div>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="ng_if.js"></script>
+</body>
+</html>
