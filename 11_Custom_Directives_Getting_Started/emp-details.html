@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Employee Details</h4>
+    </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4"><strong>Employee No:</strong></div>
+                <div class="col-sm-7">{{empno}}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4"><strong>Name:</strong></div>
+                <div class="col-sm-7">{{ename}}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4"><strong>Salary:</strong></div>
+                <div class="col-sm-7">{{sal}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>Hire Date:</strong></div>
+                <div class="col-sm-7">{{hiredate | date: 'medium'}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>DOB:</strong></div>
+                <div class="col-sm-7">{{date | date: 'medium'}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>Departament:</strong></div>
+                <div class="col-sm-7">{{deptno}}</div>
+            </div>
+        </div>
+</div>

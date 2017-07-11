@@ -1,0 +1,34 @@
+<!-- <div class="panel panel-primary">-->
+    <div ng-class='(oEmp.sal <= 7000) ? "panel panel-primary" : "panel panel-danger"'>
+    <div class="panel-heading">
+        <h4>{{oEmp.ename}}</h4>
+    </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4"><strong>Employee No:</strong></div>
+                <div class="col-sm-7">{{oEmp.empno}}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4"><strong>Name:</strong></div>
+                <div class="col-sm-7">{{oEmp.ename}}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4"><strong>Salary:</strong></div>
+                <div class="col-sm-7">{{oEmp.sal}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>Hire Date:</strong></div>
+                <div class="col-sm-7">{{oEmp.hiredate | date: 'medium'}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>DOB:</strong></div>
+                <div class="col-sm-7">{{oEmp.date | date: 'medium'}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><strong>Departament:</strong></div>
+                <div class="col-sm-7">{{oEmp.deptno}}</div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Custom Directives - Getting Started</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+<div ng-controller="emp">
+   <div ng-repeat="oEmp in employees" class="col-md-4">
+       <div emp-details></div>
+   </div>
+
+</div>
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="custom_directives_AJAX_ng-repeat.js"></script>
+</body>
+</html>
