@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Watcher, $watch, $watchGroup, $watchCollection, ng-change</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+
+<div ng-controller="emp">
+    a = <input ng-model="a" ng-change="updateC()"/> <!-- Watcher 1 -->
+    
+    <div>a = {{a}}</div> <!-- Watcher 2 -->
+
+    <div>b = {{b}}</div> <!-- Watcher 3 -->
+
+    <!-- Watcher 4 is in js file - a custom watcher -->
+</div>
+
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="watch.js"></script>
+</body>
+</html>
