@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Compile_and_Link in depth</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+<div ng-controller="msg">
+  <div message text="{{i}}" ng-repeat="i in [1,2,3,4,5]">
+     {{i}}
+  </div>
+</div>
+
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="compile_and_Link_DOM.js"></script>
+</body>
+</html>
