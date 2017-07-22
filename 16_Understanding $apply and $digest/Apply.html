@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>Understanding digest cycle</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+
+<div id="div1" ng-controller="emp">
+  
+    a = <input ng-model="a">
+    <div>a = {{a}}</div>
+    <hr/>
+
+    b = <input ng-model="b">
+    <div>b = {{b}} </div>
+    <hr/>
+
+    <button ng-click="calcSum()">Calc Sum</button>
+    <button onclick="btnClick()">Sum</button>
+    <div>sum = {{s}}</div>
+</div>
+
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="apply.js"></script>
+</body>
+</html>
