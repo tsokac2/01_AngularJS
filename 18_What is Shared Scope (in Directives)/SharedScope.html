@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                <title>What is Shared Scope (in Directives)</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!-- Angular JS CDN -->
+                        <link href="css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap.css - From root folder -->
+    </head>
+<body ng-app="app">
+<div id="div1" ng-controller="sample">
+    Controller: a = {{a}}, b = {{b}}<br>
+    Modify a: <input ng-model="a"/><br>
+    <button ng-click="changeValueB()">Change Value B</button>
+    <hr>
+
+    Directive_1 Instance 1: <div message></div><br>
+    Directive_1 Instance 2: <div message></div><br><hr>
+    Directive_2 Instance 2: <div message2></div><br>
+</div>
+ <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<!-- Bootstrap.js - From root folder -->
+<script src="js/bootstrap.js"></script>   
+<script type="text/javascript" src="sharedScope.js"></script>
+</body>
+</html>
